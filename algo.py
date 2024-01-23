@@ -10,5 +10,4 @@ def combinations(string):
                 combi += string[index]
         combis.append(combi)
     return combis
-
-print(combinations([1, 2, 3, 4]))
+    
