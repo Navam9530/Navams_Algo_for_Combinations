@@ -4,9 +4,7 @@ def get_combinations(string: str):
     """Generates the combinations one by one"""
 
     for num in range(1, 2 ** len(string)):
-        combiner = bin(num).replace('0b', '')
-        while len(combiner) < len(string):
-            combiner = '0' + combiner
+        combiner = bin(num).replace('0b', '').zfill(len(string))
         combi = ''
         for index, state in enumerate(combiner):
             if state == '1':
